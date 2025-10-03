@@ -1,0 +1,1 @@
+python ../CancerGUIDE_Internal/scripts/benchmark_generation/synthetic_benchmark.py
