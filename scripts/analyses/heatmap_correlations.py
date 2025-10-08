@@ -112,7 +112,7 @@ for method_func, method_name, method_filename in METHODS:
     if not args.one_plot:
         plt.figure(figsize=(8, 5))
         sns.heatmap(matrix, annot=True, fmt=".2f", xticklabels=METRICS, yticklabels=method_labels,
-                    cmap=cmap, cbar_kws={'label': 'Correlation / RMSE'})
+                    cmap=cmap, cbar_kws={'label': 'RMSE' if method_filename == "rmse" else 'Correlation'})
         plt.title(f"{method_name} of Proxy Benchmarks vs Ground Truth")
         plt.tight_layout()
         out_path = os.path.join(args.output_dir, f"heatmap-{method_filename}.png")
@@ -127,7 +127,7 @@ if args.one_plot:
 
     for ax, (matrix, method_name, _, method_labels, cmap) in zip(axes, heatmaps):
         sns.heatmap(matrix, annot=True, fmt=".2f", xticklabels=METRICS, yticklabels=method_labels,
-                    cmap=cmap, ax=ax, annot_kws={"size": 14}, cbar_kws={'label': 'Correlation / RMSE'})
+                    cmap=cmap, ax=ax, annot_kws={"size": 14}, cbar_kws={'label': 'RMSE' if ax == axes[0] else 'Correlation'})
         ax.set_title(f"Proxy Benchmarks vs Ground Truth:\n{method_name}", fontsize=16)
         ax.tick_params(axis="x", labelsize=10)
         ax.tick_params(axis="y", labelsize=10)
