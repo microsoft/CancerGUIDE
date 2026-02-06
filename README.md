@@ -4,6 +4,8 @@ The **National Comprehensive Cancer Network (NCCN)** provides evidence-based gui
 
 **CancerGUIDE** is an LLM agent-based framework for automatically generating guideline-compliant treatment trajectories for patients with **non-small cell lung cancer (NSCLC)**.
 
+https://doi.org/10.48550/arxiv.2509.07325
+
 ---
 
 ## ✨ Contributions
