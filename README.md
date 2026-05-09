@@ -28,7 +28,7 @@ https://doi.org/10.48550/arxiv.2509.07325
 
 ## 📂 Project Structure
 
-
+```
 CancerGUIDE/
 ├── scripts/
 │ ├── benchmark_generation/ # Generate benchmarks (self-consistency, synthetic, cross-model)
@@ -47,6 +47,7 @@ CancerGUIDE/
 │ └── heatmap_results.json # Aggregated numeric results for heatmaps
 ├── bash/ # Ordered bash scripts to reproduce paper analyses
 └── README.md
+```
 
 ---
 
